@@ -5,8 +5,9 @@
 	line-height: normal;
 	font-size: 13px;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align:center;
 	display: inline-block;
-	width: 140px;
+	width: 155px;
 	height: 18px;
 	padding: 4px 2px;
 	margin: 3px;
@@ -25,7 +26,11 @@
 	transition: border linear 0.2s, box-shadow linear 0.2s;
 }
 .datepicker input {
-	border:0; margin:0; padding:1px; text-align:right; background:transparent;
+	border:0;
+	margin:0;
+	padding:1px;
+	text-align:right;
+	background:transparent;
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;

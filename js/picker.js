@@ -31,9 +31,10 @@ $(document).ready(function () {
   $('input[type="date"]').each(function () {
     var input = $(this);
     var format = input.data('format')
-      .replace(/dd/, '<input type="number" class="day" maxlength="2" />')
-      .replace(/mm/, '<input type="number" class="month" maxlength="2" />')
-      .replace(/yy/, '<input type="number" class="year" maxlength="2" />');
+      .replace(/([^a-z0-9]+)/g, " $1")
+      .replace(/dd/i, '<input type="number" class="day" maxlength="2" />')
+      .replace(/mm/i, '<input type="number" class="month" maxlength="2" />')
+      .replace(/yy/i, '<input type="number" class="year" maxlength="2" />');
     var picker = $('<span class="datepicker"></span>')
       .append(format);
     var setDate = function(inst) {
