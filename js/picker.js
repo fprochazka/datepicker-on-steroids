@@ -56,7 +56,7 @@ $(document).ready(function () {
     setDate(pickerUi);
     // replace with numer inputs
     input.after(picker);
-    input.css({'width':'0', 'border':'0', 'background': 'transparent'});
+    input.addClass('hidden-input');
     picker.data('date-input', input);
     var inputs = picker.find('input');
     // bind events
