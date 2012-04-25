@@ -30,7 +30,7 @@ $(document).ready(function () {
   // build inputs
   $('input[type="date"]').each(function () {
     var input = $(this);
-    var format = input.data('format')
+    var format = input.data('date-format')
       .replace(/([^a-z0-9]+)/g, " $1")
       .replace(/dd/i, '<input type="number" class="day" maxlength="2" />')
       .replace(/mm/i, '<input type="number" class="month" maxlength="2" />')
@@ -45,7 +45,7 @@ $(document).ready(function () {
     // create datepicker icon
     input.datepicker({
       showOn: "button",
-      dateFormat: input.data('format'),
+      dateFormat: input.data('date-format'),
       buttonImage: "calendar.gif",
       buttonImageOnly: true,
       onClose: function(dateText, inst) {
