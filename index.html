@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="utf-8">
+    <title>Datepicker test</title>
+
+    <!-- Le meta -->
+    <meta name="description" content="">
+    <meta name="author" content="Filip Procházka; hosiplan@kdyby.org">
+
+    <!-- Le styles -->
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/jquery-ui-1.8.19.custom.min.js"></script>
+    <link href="css/jquery-ui-1.8.19.custom.css" type="text/css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <style>
+      body { text-align:center; }
+      .container { margin-top:10%; }
+      h1 { margin-bottom:20px; }
+    </style>
+
+    <!-- Le picker -->
+    <script src="js/jquery.cursor.js"></script>
+    <script src="js/picker.js"></script>
+    <link href="css/picker.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>Datepicker?</h1>
+
+      <form method="post" action="post" class="form-inline">
+        <label for="date">Datum:</label>
+        <input type="date" data-format="dd.mm.yy" name="date" id="date" value="25.4.2012" />
+        <input type="submit" class="btn" value="Odeslat" />
+      </form>
+
+      <p>(hint: zkus co dělá kolečko nad inputem :)</p>
+
+      <script>
+        $('form').submit(function(e) {
+          alert($(this).serialize());
+          return false;
+        });
+      </script>
+
+    </div> <!-- /container -->
+
+</body></html>
