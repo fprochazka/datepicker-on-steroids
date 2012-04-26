@@ -77,8 +77,10 @@
         return false;
       }).bind('click', function (event) {
         $(this).select();
+        dateInputValidator($(this));
+        input.val(mergeInputs(picker));
 
-      }).bind('keyup', function (event) {
+      }).bind('keyup change', function (event) {
         dateInputValidator($(this));
         input.val(mergeInputs(picker));
 
