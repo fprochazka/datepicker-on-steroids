@@ -17,6 +17,7 @@
       body { text-align:center; }
       .container { margin-top:10%; }
       h1 { margin-bottom:20px; }
+      .picker-box { margin-top:80px; }
     </style>
 
     <!-- Le picker -->
@@ -27,15 +28,22 @@
   <body>
 
     <div class="container">
-      <h1>Datepicker?</h1>
+      <div class="row">
+        <div class="span6 picker-box">
+          <h1>Datepicker?</h1>
 
-      <form method="post" action="post" class="form-inline">
-        <label for="date">Datum:</label>
-        <input type="date" data-date-format="dd.mm.yy" name="date" id="date" value="25.4.2012" />
-        <input type="submit" class="btn" value="Odeslat" />
-      </form>
+          <form method="post" action="post" class="form-inline">
+            <label for="date">Datum:</label>
+            <input type="date" data-date-format="dd.mm.yy" name="date" id="date" value="25.4.2012" />
+            <input type="submit" class="btn" value="Odeslat" />
+          </form>
 
-      <p>(hint: zkus co dělá kolečko nad inputem :)</p>
+          <p>(hint: zkus co dělá kolečko nad inputem :)</p>
+        </div>
+        <div class="span6">
+          <img src="http://hosiplan.com/memes/faces/not-bad.jpg" alt="" />
+        </div>
+      </div>
 
       <script>
         $('form').submit(function(e) {
